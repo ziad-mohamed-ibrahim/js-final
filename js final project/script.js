@@ -400,7 +400,7 @@ for (let i = 0; i < TankAmmount; i++) {
         let enemy = document.createElement("img")
 
         enemy.classList.add("enemy")
-        enemy.src = "enemy/meeleeEnemy.png"
+        enemy.src = "enemy/fastEnemy.png"
 
         enemy.health = 75
         enemy.canAttack = true
@@ -692,7 +692,7 @@ for (let i = 0; i < SmokerAmmount; i++) {
                 enemy.canAttack = false
 
                 enemy.src =
-                    "enemy/meeleeEnemyAttack.png"
+                    "enemy/projectileEnemy.png"
 
                 setTimeout(() => {
 
