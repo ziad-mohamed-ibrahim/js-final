@@ -295,6 +295,7 @@ document.addEventListener("keydown", (e) => {
     }
     DashSFX.currentTime = 0
     DashSFX.play()
+    ash = ash -30
     stamina -= 1
     canDash = false
 
@@ -596,9 +597,9 @@ for (let i = 0; i < SmokerAmmount; i++) {
     setInterval(() => {
 
         if (!enemy.parentElement || dead) return
-        document.getElementById("ash").style="margin-bottom: 8500px; display: block; opacity: 60;"
+        document.getElementById("ash").style="margin-bottom: 8500px; display: block;"
         ash += 10
-
+        document.getElementById("ash").style.opacity =`${ash}`
         if (ash >= 100) {
             ash = 0
             health -= 5
@@ -1081,26 +1082,9 @@ recoil =  0
         canSlash = true
     }, 1000 * swordSpeedMulti)
 }
-
-
-
-
-
-
-
-
 }
 
-
-
-
-
-
-
-
-
 //end of game
-
 
 //pause
 function soundvolcheck(){
