@@ -395,7 +395,43 @@ for (let i = 0; i < TankAmmount; i++) {
 
     document.body.appendChild(enemy)
 }
+    for (let i = 0; i < FastZombieAmmount; i++) {
 
+        let enemy = document.createElement("img")
+
+        enemy.classList.add("enemy")
+        enemy.src = "enemy/meeleeEnemy.png"
+
+        enemy.health = 75
+        enemy.canAttack = true
+        enemy.speed = 4
+        enemy.damage = 10
+
+        enemy.style.position = "fixed"
+        enemy.style.scale = "0.4"
+        enemy.style.zIndex = "4"
+
+        let side = Math.floor(Math.random() * 4)
+
+        if (side === 0) {
+            enemy.style.left = Math.random() * window.innerWidth + "px"
+            enemy.style.top = "-150px"
+        }
+        else if (side === 1) {
+            enemy.style.left = window.innerWidth + "px"
+            enemy.style.top = Math.random() * window.innerHeight + "px"
+        }
+        else if (side === 2) {
+            enemy.style.left = Math.random() * window.innerWidth + "px"
+            enemy.style.top = window.innerHeight + "px"
+        }
+        else {
+            enemy.style.left = "-150px"
+            enemy.style.top = Math.random() * window.innerHeight + "px"
+        }
+
+        document.body.appendChild(enemy)
+    }
 for (let i = 0; i < BossAmmount; i++) {
 
     let enemy = document.createElement("img")
