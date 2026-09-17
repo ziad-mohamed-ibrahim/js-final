@@ -596,7 +596,7 @@ for (let i = 0; i < SmokerAmmount; i++) {
     setInterval(() => {
 
         if (!enemy.parentElement || dead) return
-
+        document.getElementById("ash").style="margin-bottom: 8500px; display: block; opacity: 60;"
         ash += 10
 
         if (ash >= 100) {
