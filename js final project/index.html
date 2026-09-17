@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERUPTION</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="menu">
+        <div id="MainMenu">
+    <h1 id="title">Eruption</h1>
+    <ul>
+        <li><button onclick="start()">Play</button></li>
+        <li><button onclick="SettingsToggle()">Settings</button></li>
+        <li><button onclick="quit()">Quit</button></li>
+    </ul></div>
+    <div class="settings" id="settingsToggle">
+        <div>
+        <label for="slider">Music Volume:</label>
+    <input type="range" min="0" max="100" value="50" class="sliders" id="slider"><label id="VolumeCheck"></label></div><br>
+<div>
+        <label for="slider2">disabled not working</label>
+    <input type="range" min="0" max="100" value="50" class="sliders" id="slider2"><label id="VolumeCheck2"></label></div>
+    <br>
+
+    <button class="toggle off" id="fullscreenToggle" onclick="fullscreen()">
+    <span class="off" id="toggleSpan"></span>
+</button>
+
+<br>
+    <button onclick="SettingsToggle()" id="done">done</button>
+    </div>
+    <audio id="menuMusic" autoplay loop>
+    <source src="Theme_on_Piano_and_Horns.ogg" type="audio/ogg">
+</audio>
+    </div>
+
+    
+
+<div id="head-and-body">
+    <img src="player/head.png" alt="" id="head">
+    <img src="player/body.png" alt="" id="body">
+    <img src="hitboxOflava.png" alt="" id="lavaHitbox">
+</div>
+    <div id="weapons"><img src="player/Gun.png" alt="" id="gun">
+    <img src="player/Blade.png" alt="" id="blade"></div>
+
+    <audio id="levelMusic"  loop>
+    <source src="war without reason.mp3" type="audio/mp3"></audio>
+<div id="ui">
+    <label for="">Health:</label><h3 id="health"></h3><label for="" id="maxHP"></label>
+    <br>
+    <label for="">Stamina:</label><h3 id="stamina"></h3>
+<div id="upgrades" style="display: none;">
+    <h1>UPGRADES</h1>
+
+    <button onclick="upgradeHealth()" id="hpUP">Health 1.5x</button>
+    <br>
+    <button onclick="upgradeStamina()" id="stUP">Stamina Regen 1.5x</button>
+    <br>
+    <button onclick="upgradeSword()" id="sdUP">Sword Speed 0.5x</button>
+    <br>
+    <button onclick="upgradeGun()" id="gnUP">Gun Speed 0.5x</button>
+</div>
+</div>
+<div id="screenFX">
+    <img src="DeathScreen.jpg" alt="" id="death">
+ <img src="ash.png" alt="" id="ash">
+    <img src="parry.png" alt="" id="parry">
+</div>
+<div id="SFX">
+<audio id="DashSFX">
+    <source src="Dash.ogg">
+</audio>
+<audio id="dashfail">
+    <source src="dashfail.ogg">
+</audio>
+<audio id="shoot">
+    <source src="Shoot1.ogg">
+</audio>
+<audio id="hurt">
+    <source src="V1_hurt.wav">
+</audio>
+<audio id="slash">
+    <source src="musicholder-sword-sound-260274.mp3">
+</audio>
+<audio id="deathsound">
+    <source src="TV_Off.ogg">
+</audio>
+</div>
+<img src="platform.png" alt="FAILED TO LOAD PLATFORM PLEASE REFRESH THE PAGE!" id="platform">
+<img src="lavaGame.png" alt="" id="lava">
+
+</body>
+<script src="script.js"></script>
+</html>
+>
