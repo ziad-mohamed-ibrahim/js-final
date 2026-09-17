@@ -1,4 +1,6 @@
 *{margin: 0; padding: 0;}
+*::-moz-selection{    background-color: transparent;
+    color: #000;}
 body{background:no-repeat url(lava.png) ;
        background-position: top;
         width: 100%;
