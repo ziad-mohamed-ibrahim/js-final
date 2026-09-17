@@ -690,9 +690,8 @@ for (let i = 0; i < SmokerAmmount; i++) {
             ) {
 
                 enemy.canAttack = false
-
-                enemy.src =
-                    "enemy/projectileEnemy.png"
+enemy.src =
+    "enemy/meeleeEnemyAttack.png"
 
                 setTimeout(() => {
 
